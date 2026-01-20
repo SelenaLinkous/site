@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liminal Architecture LLC | Portland Design Excellence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --accent: #5e6d5e;
+            --text-muted: #666;
+            --bg-light: #f9f9f7;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--primary); background-color: var(--white); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* 1. HERO SECTION */
+        .hero { height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover; color: var(--white); }
+        .hero-inner { max-width: 800px; }
+        .hero h1 { font-size: 4.5rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero p { font-size: 1.25rem; font-weight: 300; letter-spacing: 1px; opacity: 0.9; }
+
+        /* SECTION STYLING */
+        section { padding: 100px 0; }
+        .sub-heading { text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; color: var(--accent); font-weight: 600; display: block; margin-bottom: 15px; }
+        .section-title { font-size: 2.5rem; margin-bottom: 40px; }
+
+        /* 2. ABOUT US */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-content p { margin-bottom: 20px; font-size: 1.1rem; color: var(--text-muted); }
+
+        /* 3. SERVICES */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .service-card { padding: 40px; background: var(--bg-light); border-top: 4px solid var(--accent); }
+        .service-card h3 { margin-bottom: 15px; font-size: 1.5rem; }
+        .service-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* 4. ADVANTAGES */
+        .advantages { background-color: var(--primary); color: var(--white); }
+        .adv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        .adv-item h3 { color: var(--accent); margin-bottom: 15px; }
+        .adv-item p { opacity: 0.8; }
+
+        /* 5. OUR PROCESS */
+        .process-row { display: flex; flex-direction: column; gap: 40px; }
+        .step { display: flex; align-items: center; gap: 50px; }
+        .step-num { font-size: 4rem; font-family: 'Playfair Display'; color: #eee; min-width: 80px; }
+        .step-content h3 { margin-bottom: 10px; }
+
+        /* 6. CONTACT FORM */
+        .contact-section { background: var(--bg-light); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; }
+        .form-group { margin-bottom: 25px; }
+        .form-group label { display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; font-family: inherit; }
+        .submit-btn { padding: 15px 40px; background: var(--primary); color: white; border: none; cursor: pointer; text-transform: uppercase; letter-spacing: 2px; transition: var(--transition); }
+        .submit-btn:hover { background: var(--accent); }
+
+        /* 7. CONTACTS / FOOTER */
+        footer { padding: 60px 0; background: #111; color: #ccc; font-size: 0.9rem; }
+        .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; }
+        .footer-info p { margin-bottom: 5px; }
+        .footer-info strong { color: var(--white); display: block; margin-top: 15px; }
+
+        @media (max-width: 768px) {
+            .about-grid, .adv-grid, .contact-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <span class="sub-heading" style="color: white; opacity: 0.8;">Portland's Premier Architectural Studio</span>
+                <h1>Crafting the Threshold of Modernity</h1>
+                <p>Liminal Architecture LLC: Specialized design solutions led by Principal Selena Linkous.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="sub-heading">The Studio</span>
+                    <h2 class="section-title">Bridging Vision and Structure</h2>
+                    <p>Based in the heart of Portland, Oregon, Liminal Architecture LLC is a boutique firm dedicated to professional, scientific, and technical services within the architectural sector. Our practice, steered by Selena Linkous, focuses on the "liminal" space where human experience meets physical form.</p>
+                    <p>With a robust background in architectural engineering and related services, we maintain a standard of excellence reflected in our significant annual revenue and industry positioning. We believe every project is an opportunity to redefine the Pacific Northwest skyline.</p>
+                    <p>Our commitment to precision ensures that every site-specific detail is handled with scientific rigor and creative flair.</p>
+                </div>
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1000" alt="Modern Building" style="width:100%; height:auto;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" style="background: var(--bg-light);">
+        <div class="container">
+            <span class="sub-heading">Expertise</span>
+            <h2 class="section-title">Our Architectural Offerings</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Architectural Engineering</h3>
+                    <p>We provide comprehensive structural analysis and technical design solutions that ensure long-term stability and aesthetic harmony. Our engineering services are tailored to the unique environmental demands of the Oregon climate.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Scientific Design Services</h3>
+                    <p>Leveraging professional and scientific methodologies, we analyze spatial flow and environmental impact to create highly efficient buildings. We use data-driven insights to optimize every square foot of your project.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Technical Consulting</h3>
+                    <p>Our specialized design services include deep-dive technical consultations to navigate zoning, specialized building codes, and complex urban planning requirements. We transform regulatory hurdles into design opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="advantages">
+        <div class="container">
+            <span class="sub-heading">The Liminal Edge</span>
+            <h2 class="section-title" style="color: white;">Why Partner With Us</h2>
+            <div class="adv-grid">
+                <div class="adv-item">
+                    <h3>Principal-Led Design</h3>
+                    <p>Your project is personally managed by Selena Linkous, ensuring that the firm's core vision and high standards are applied to every blueprint.</p>
+                </div>
+                <div class="adv-item">
+                    <h3>Regional Proficiency</h3>
+                    <p>Operating out of Portland (97215), we have an intimate understanding of Pacific Northwest urban design and environmental sustainability.</p>
+                </div>
+                <div class="adv-item">
+                    <h3>Boutique Excellence</h3>
+                    <p>With a focused team at our 53rd Ave site, we provide the agility and dedicated attention that larger firms often lack.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process">
+        <div class="container">
+            <span class="sub-heading">Workflow</span>
+            <h2 class="section-title">From Blueprint to Reality</h2>
+            <div class="process-row">
+                <div class="step">
+                    <div class="step-num">01</div>
+                    <div class="step-content">
+                        <h3>Technical Discovery</h3>
+                        <p>We analyze the site metrics and scientific constraints of the project to build a solid technical foundation.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">02</div>
+                    <div class="step-content">
+                        <h3>Iterative Refinement</h3>
+                        <p>Our design team develops architectural solutions that balance your vision with engineering realities.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-num">03</div>
+                    <div class="step-content">
+                        <h3>Site Integration</h3>
+                        <p>We oversee the transition from specialized design to physical construction, ensuring every detail remains true to the original intent.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div>
+                    <span class="sub-heading">Engagement</span>
+                    <h2 class="section-title">Start Your Architectural Journey</h2>
+                    <p>We invite you to reach out for a professional consultation regarding your upcoming project. Our team is ready to provide the technical and scientific expertise needed for your success.</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label>YOUR NAME</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>EMAIL ADDRESS</label>
+                            <input type="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>PROJECT BRIEF</label>
+                            <textarea rows="5" placeholder="Describe your vision and site requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <h3 style="color: white;">Liminal Architecture LLC</h3>
+                    <p>Designing Portland's Future</p>
+                </div>
+                <div class="footer-info">
+                    <p><strong>Address:</strong> 2311 SE 53rd Ave, Portland, OR, 97215-3917, United States</p>
+                    <p><strong>Email:</strong> info@liminalarchitecture.pro</p>
+                </div>
+            </div>
+            <div style="margin-top: 40px; border-top: 1px solid #333; padding-top: 20px; font-size: 0.7rem; text-align: center;">
+                &copy; 2026 Liminal Architecture LLC. Principal: Selena Linkous.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
